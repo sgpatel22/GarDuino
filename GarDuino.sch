@@ -4,9 +4,9 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "Arduino-Based Irrigation Controller"
-Date "2020-04-18"
-Rev "0"
+Title "GarDuino- Arduino-Based Drip Irrigation System"
+Date "2020-04-20"
+Rev "0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L NodeMCU:NodeMCU_1.0_(ESP-12E) U?
+L NodeMCU:NodeMCU_1.0_(ESP-12E) U1
 U 1 1 5E9944EE
 P 2300 3050
-F 0 "U?" H 2300 4137 60  0000 C CNN
+F 0 "U1" H 2300 4137 60  0000 C CNN
 F 1 "NodeMCU_1.0_(ESP-12E)" H 2300 4031 60  0000 C CNN
 F 2 "" H 1700 2200 60  0000 C CNN
 F 3 "" H 1700 2200 60  0000 C CNN
@@ -36,10 +36,10 @@ F 3 "" H 3450 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Interface_Expansion:PCF8574 U?
+L Interface_Expansion:PCF8574 U2
 U 1 1 5E99C333
 P 5650 2600
-F 0 "U?" H 5650 3481 50  0000 C CNN
+F 0 "U2" H 5650 3481 50  0000 C CNN
 F 1 "PCF8574" H 5650 3390 50  0000 C CNN
 F 2 "" H 5650 2600 50  0001 C CNN
 F 3 "http://www.nxp.com/documents/data_sheet/PCF8574_PCF8574A.pdf" H 5650 2600 50  0001 C CNN
@@ -58,10 +58,10 @@ F 3 "" H 5650 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R2
 U 1 1 5E9A68B6
 P 5000 2050
-F 0 "R?" H 5068 2096 50  0000 L CNN
+F 0 "R2" H 5068 2096 50  0000 L CNN
 F 1 "4.7kΩ" H 5068 2005 50  0000 L CNN
 F 2 "" H 5000 2050 50  0001 C CNN
 F 3 "~" H 5000 2050 50  0001 C CNN
@@ -69,10 +69,10 @@ F 3 "~" H 5000 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small_US R?
+L Device:R_Small_US R1
 U 1 1 5E9A8484
 P 4650 2050
-F 0 "R?" H 4718 2096 50  0000 L CNN
+F 0 "R1" H 4718 2096 50  0000 L CNN
 F 1 "4.7kΩ" H 4718 2005 50  0000 L CNN
 F 2 "" H 4650 2050 50  0001 C CNN
 F 3 "~" H 4650 2050 50  0001 C CNN
@@ -100,17 +100,6 @@ F 1 "GND" H 4905 3127 50  0000 C CNN
 F 2 "" H 4900 3300 50  0001 C CNN
 F 3 "" H 4900 3300 50  0001 C CNN
 	1    4900 3300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 5E9ABDB9
-P 4300 1900
-F 0 "R?" H 4368 1946 50  0000 L CNN
-F 1 "10k" H 4368 1855 50  0000 L CNN
-F 2 "" H 4300 1900 50  0001 C CNN
-F 3 "~" H 4300 1900 50  0001 C CNN
-	1    4300 1900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -146,10 +135,10 @@ F 3 "" H 6250 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 74xx:74HC4051 U?
+L 74xx:74HC4051 U3
 U 1 1 5E9F278B
 P 4450 5200
-F 0 "U?" H 4500 5881 50  0000 C CNN
+F 0 "U3" H 4500 5881 50  0000 C CNN
 F 1 "74HC4051" H 4500 5790 50  0000 C CNN
 F 2 "" H 4450 4800 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/cd74hc4051.pdf" H 4450 4800 50  0001 C CNN
@@ -188,10 +177,10 @@ $EndComp
 Wire Wire Line
 	4200 4700 4450 4700
 $Comp
-L Connector:Conn_01x08_Male J?
+L Connector:Conn_01x08_Male J2
 U 1 1 5E9F7A52
 P 5600 5200
-F 0 "J?" H 5572 5174 50  0000 R CNN
+F 0 "J2" H 5572 5174 50  0000 R CNN
 F 1 "Conn_01x08_Male" H 5572 5083 50  0000 R CNN
 F 2 "" H 5600 5200 50  0001 C CNN
 F 3 "~" H 5600 5200 50  0001 C CNN
@@ -238,17 +227,6 @@ F 3 "" H 5000 1500 50  0001 C CNN
 	1    5000 1500
 	-1   0    0    -1  
 $EndComp
-$Comp
-L power:+3.3V #PWR?
-U 1 1 5EA082FE
-P 4300 1500
-F 0 "#PWR?" H 4300 1350 50  0001 C CNN
-F 1 "+3.3V" H 4315 1673 50  0000 C CNN
-F 2 "" H 4300 1500 50  0001 C CNN
-F 3 "" H 4300 1500 50  0001 C CNN
-	1    4300 1500
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	3450 2450 3100 2450
 $Comp
@@ -262,9 +240,9 @@ F 3 "" H 3250 2350 50  0001 C CNN
 	1    3250 2350
 	1    0    0    -1  
 $EndComp
-Text GLabel 1500 3650 0    50   Input ~ 0
-SDA
 Text GLabel 1500 3550 0    50   Input ~ 0
+SDA
+Text GLabel 1500 3650 0    50   Input ~ 0
 SCL
 Text GLabel 5000 2200 0    50   Input ~ 0
 SCL
@@ -2885,11 +2863,11 @@ Connection ~ 5000 1900
 Wire Wire Line
 	5000 1900 5650 1900
 $Comp
-L Device:C_Small C?
+L Device:C_Small C1
 U 1 1 5E9DCD73
 P 5100 1650
-F 0 "C?" V 4871 1650 50  0000 C CNN
-F 1 "10uF" V 4950 1750 50  0000 C CNN
+F 0 "C1" V 4871 1650 50  0000 C CNN
+F 1 ".1uF" V 4950 1750 50  0000 C CNN
 F 2 "" H 5100 1650 50  0001 C CNN
 F 3 "~" H 5100 1650 50  0001 C CNN
 	1    5100 1650
@@ -2914,11 +2892,11 @@ Wire Wire Line
 Wire Wire Line
 	5000 1650 5000 1900
 $Comp
-L Device:C_Small C?
+L Device:C_Small C2
 U 1 1 5E9E384C
 P 4050 4700
-F 0 "C?" V 3800 4600 50  0000 C CNN
-F 1 "10uF" V 3900 4600 50  0000 C CNN
+F 0 "C2" V 3800 4600 50  0000 C CNN
+F 1 ".1uF" V 3900 4600 50  0000 C CNN
 F 2 "" H 4050 4700 50  0001 C CNN
 F 3 "~" H 4050 4700 50  0001 C CNN
 	1    4050 4700
@@ -2954,10 +2932,10 @@ Wire Wire Line
 Wire Wire Line
 	6400 2600 6550 2600
 $Comp
-L Connector:Conn_01x07_Male J?
+L Connector:Conn_01x07_Male J1
 U 1 1 5E9E6881
 P 6750 2400
-F 0 "J?" H 6722 2424 50  0000 R CNN
+F 0 "J1" H 6722 2424 50  0000 R CNN
 F 1 "Conn_01x07_Male" H 6722 2333 50  0000 R CNN
 F 2 "" H 6750 2400 50  0001 C CNN
 F 3 "~" H 6750 2400 50  0001 C CNN
@@ -2979,17 +2957,11 @@ F 3 "" H 6400 2050 50  0001 C CNN
 	1    6400 2050
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	4300 1500 4300 1800
-Wire Wire Line
-	4300 3000 5150 3000
-Wire Wire Line
-	4300 2000 4300 3000
 $Comp
-L Connector:Screw_Terminal_01x02 J?
+L Connector:Screw_Terminal_01x02 J3
 U 1 1 5E9B783E
 P 8450 3350
-F 0 "J?" H 8530 3342 50  0000 L CNN
+F 0 "J3" H 8530 3342 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 8530 3251 50  0000 L CNN
 F 2 "" H 8450 3350 50  0001 C CNN
 F 3 "~" H 8450 3350 50  0001 C CNN
@@ -3018,4 +2990,6 @@ F 3 "" H 8250 3450 50  0001 C CNN
 	1    8250 3450
 	1    0    0    -1  
 $EndComp
+Text Notes 8250 5400 0    50   Italic 0
+LED's not yet in place
 $EndSCHEMATC
